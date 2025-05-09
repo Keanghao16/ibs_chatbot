@@ -16,6 +16,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - wassup
 
 - intent: goodbye
   examples: |
@@ -56,6 +57,8 @@ nlu:
     - amazing
     - feeling like a king
     - wonderful
+    - fine
+    - I'm fine
     - I am feeling very good
     - I am great
     - I am amazing
@@ -89,3 +92,59 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: ask_ibs_history
+  examples: |
+    - Can you tell me about the history of IBS?
+    - What is the history of IBS?
+    - How did IBS start?
+    - Tell me about the origin of IBS.
+    - When was IBS established?
+
+- intent: ask_ibs_location
+  examples: |
+    - Where is IBS located?
+    - What is the address of IBS?
+    - Can you share the location of IBS?
+    - Where can I find IBS?
+    - What is the IBS campus address?
+
+- intent: ask_ibs_library
+  examples: |
+    - What are the library hours at IBS?
+    - When is the IBS library open?
+    - Can you tell me the library schedule?
+    - What time does the library open and close?
+    - Is the library open on weekends?
+
+- intent: ask_entrollment_requirements
+  examples: |
+    - What are the enrollment requirements for IBS?
+    - How can I enroll at IBS?
+    - What qualifications do I need to join IBS?
+    - What are the prerequisites for admission to IBS?
+    - Do I need a high school diploma to enroll at IBS?
+
+- intent: ask_entrance_exam_subject
+  examples: |
+    - What subjects are included in the entrance exam?
+    - Can you tell me about the entrance exam subjects?
+    - What do I need to study for the IBS entrance exam?
+    - What topics are covered in the entrance exam?
+    - How many subjects are in the IBS entrance exam?
+
+- intent: ask_tuition_fee
+  examples: |
+    - What is the tuition fee for IBS?
+    - How much does it cost to study at IBS?
+    - Can you tell me about the tuition fees?
+    - What are the fees for the Banking and Management program?
+    - How much is the semester fee at IBS?
+
+- intent: ask_program_details
+  examples: |
+    - Can you provide details about the IBS programs?
+    - What programs does IBS offer?
+    - Tell me about the Banking and Management program.
+    - What degrees can I earn at IBS?
+    - Can you explain the IBS curriculum?

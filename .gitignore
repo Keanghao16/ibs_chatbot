@@ -1,7 +1,7 @@
-# Create a .gitignore file to exclude unnecessary files
-
-echo "__pycache__/" >> .gitignore
-echo "models/*.tar.gz" >> .gitignore  # Exclude trained models
-echo "data/nlu/*.md" >> .gitignore    # Exclude temporary NLU files
-echo ".idea/" >> .gitignore           # Exclude IDE files (PyCharm, etc.)
-echo "*.iml" >> .gitignore
+__pycache__/
+models/*.tar.gz 
+data/nlu/*.md    
+.idea/          
+*.iml
+venv/
+.rasa/

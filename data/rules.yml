@@ -11,3 +11,38 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+# - rule: Provide IBS history
+#   steps:
+#     - intent: ask_ibs_history
+#     - action: utter_ask_ibs_history
+
+# - rule: Provide IBS location
+#   steps:
+#     - intent: ask_ibs_location
+#     - action: utter_ask_ibs_location
+
+# - rule: Provide IBS library hours
+#   steps:
+#     - intent: ask_ibs_library
+#     - action: utter_ask_ibs_library
+
+# - rule: Provide enrollment requirements
+#   steps:
+#     - intent: ask_entrollment_requirements
+#     - action: utter_ask_entrollment_requirements
+
+# - rule: Provide entrance exam subjects
+#   steps:
+#     - intent: ask_entrance_exam_subject
+#     - action: utter_ask_entrance_exam_subject
+
+# - rule: Provide tuition fee details
+#   steps:
+#     - intent: ask_tuition_fee
+#     - action: utter_tuition_fee
+
+# - rule: Provide program details
+#   steps:
+#     - intent: ask_program_details
+#     - action: utter_program_details

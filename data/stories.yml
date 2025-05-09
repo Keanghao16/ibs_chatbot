@@ -1,7 +1,6 @@
 version: "3.1"
 
 stories:
-
 - story: happy path
   steps:
   - intent: greet
@@ -28,3 +27,38 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: ask IBS history
+  steps:
+    - intent: ask_ibs_history
+    - action: utter_ask_ibs_history
+
+- story: ask IBS location
+  steps:
+    - intent: ask_ibs_location
+    - action: utter_ask_ibs_location
+
+- story: ask IBS library
+  steps:
+    - intent: ask_ibs_library
+    - action: utter_ask_ibs_library
+
+- story: ask enrollment requirements
+  steps:
+    - intent: ask_entrollment_requirements
+    - action: utter_ask_entrollment_requirements
+
+- story: ask entrance exam subjects
+  steps:
+    - intent: ask_entrance_exam_subject
+    - action: utter_ask_entrance_exam_subject
+
+- story: ask tuition fee
+  steps:
+    - intent: ask_tuition_fee
+    - action: utter_tuition_fee
+
+- story: ask program details
+  steps:
+    - intent: ask_program_details
+    - action: utter_program_details
