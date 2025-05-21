@@ -12,11 +12,21 @@ intents:
   - ask_ibs_location
   - ask_ibs_library
   - ask_entrollment_requirements
-  - ask_entrance_exam_subject
+  - ask_entrance_exam
   - ask_tuition_fee
   - ask_program_details
 
+  - major
+  - program_type
+
+
+  - ask_program_fee
+  - ask_major_details
+  - inform
+
+
 responses:
+# General Interaction
   utter_greet:
   - text: "Hey! How are you?"
 
@@ -35,7 +45,10 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
-
+#-------------------------------------
+  
+  
+# General Information about IBS
   utter_ask_ibs_history:
   - text: "The Institute of Banking Studies (IBS) originated in December 1979 as an internal training program by the National Bank of Cambodia (NBC). It evolved into the Center for Banking Studies (CBS) in 1994, expanding its training to both NBC staff and the public. Over the years, with support from international partners and cooperation with institutions like the Banking University of Ho Chi Minh City and the Banking Academy of Vietnam, CBS continuously improved its curriculum. In September 2024, CBS was officially inaugurated as the Institute of Banking Studies (IBS) to further strengthen education and human resource development in banking and finance."
 
@@ -46,110 +59,84 @@ responses:
 
   utter_ask_ibs_library:
   - text: "Our library is open on Monday to Friday from 7:00 AM to 4:00 PM."
+#-------------------------------------
 
+
+# Enrollment and Admission Information
   utter_ask_entrollment_requirements:
   - text: "Students who wish to enroll at the Institute of Banking Studies (IBS) must hold a high school diploma or an equivalent qualification. In addition, they are required to take and pass a mandatory entrance examination administered by IBS before being accepted into the program."
 
-  utter_ask_entrance_exam_subject:
+  utter_ask_entrance_exam:
   - text: "There are three subjects for the entrance examination: General Knowledge, Mathematics and English. It will take approximately 1 hour and 30 minutes for each subject."
 
   utter_tuition_fee:
   - text: "The tuition fees for the Banking and Management program are structured based on the level of study. For the Associate Degree, the fee is 500,000 Riel per semester, and for the Bachelor's Degree, it is 1,000,000 Riel per semester. If you need further details or assistance, please contact the Administration Office."
 
-  # utter_program_details:
-  # - text: "IBS offers Associate and Bachelor's degrees in Banking and Management."
-  utter_program_details:
-  - text: "
-      The Institute of Banking Studies (IBS) offers a 4-year program in Banking and Management, with an Associate Degree in Years 1–2 and a Bachelor’s Degree in Years 3–4.
 
-      **Associate Degree**
+  utter_program_fee:
+    - text: "The annual fee for the {program_type} program in {major} is ${amount}."
+  utter_ask_major:
+    - text: "Which major are you interested in? (Banking Management, FinTech, Accounting)"
 
-      *Year 1 Semester 1:*
-      - Principles of Accounting (3 credits)
-      - Principles of Money and Banking (3)
-      - Principles of Microeconomics (3)
-      - Mathematics for Finance (3)
-      - English for Communication (2)
-      - Foundation of Digital Productivity (2)
-      - History (1)
+#-------------------------------------
 
-      *Year 1 Semester 2:*
-      - Financial Accounting (3)
-      - Banking Products & Ethics of Sales (2)
-      - Principles of Macroeconomics (3)
-      - Advanced Mathematics for Finance (3)
-      - English for Banking (2)
-      - Philosophy (1)
-      - Introduction to Banking Laws (2)
 
-      *Year 2 Semester 1:*
-      - Applied Accounting and Banking Operation (3)
-      - Financial Analysis (3)
-      - Insurance (2)
-      - Introduction to Financial Markets (2)
-      - Responsible Banking (CBI BAF_2036) (2)
-      - Corporate Banking: Large Corp. & SME Lending (2)
-      - Wealth & Asset Management (2)
-      - Company Law (2)
-      - English for Academic (2)
 
-      *Year 2 Semester 2:*
-      - Statistics for Economics and Business (3)
-      - Introduction to FX & ALM (2)
-      - Microfinance & Financial Inclusion (2)
-      - Real Estate Finance (2)
-      - Sustainable Banking (CBI BAF_2045) (2)
-      - Digital Banking & Fintech (2)
-      - Monetary Economics (2)
-      - Contract Law (2)
-      - Digital Transformation Banking (2)
 
-      **Bachelor Degree**
 
-      *Year 3 Semester 1:*
-      - International Economics (2)
-      - Central Banking, Monetary Policy & Financial Stability (3)
-      - Programming for Banking and Financial (2)
-      - ACCA (to be defined) (2)
-      - Audit & Risk Management (2)
-      - Commercial & Corporate Lending (CBI BAF_3052) (2)
-      - FinTech Law (2)
-      - English for Banking Advanced (1)
+# Program Information
+  utter_ask_program_type:
+    - text: "Do you want details for an associate, BA, or BSc program?"
+  
+  utter_course_info:
+    - text: "Here are the details for {program_type} in {course_name}: ..."
+  
+  # utter_fee_details:
+  #   - text: "The {fee_type} for {course_name} is {amount}."
+#-------------------------------------
 
-      *Year 3 Semester 2:*
-      - Industrial Economics (2)
-      - Data Analytics for Banking and Financial (2)
-      - ACCA (to be defined) (2)
-      - Financial Management & Corporate Valuation (3)
-      - Management & Organization (2)
-      - Digital & AI Evolution in Banking (CBI) (2)
-      - Consumer Protection Law I (2)
-      - English for Academics Advanced (1)
 
-      *Year 4 Semester 1:*
-      - ACCA (to be defined) (2)
-      - Consumer Protection Law II (2)
-      - Marketing in the Financial Sector (2)
-      - SME Lending (IBF BAF_4076) (2)
-      - Trade Finance & Cash Management (2)
-      - Risk Management in Banking (IBF BAF_4075) (2)
-      - Strategy in the Financial Sector (2)
-      - Combating Illicit Finance (2)
-      - Research Methodology & Ethics (2)
+entities:
+  - program
 
-      *Year 4 Semester 2:*
-      - Cost Accounting & Management Control (2)
-      - Compliance & Internal Audit (IBF BAF_4087) (2)
-      - Advanced Financial Markets (2)
-      - Academic Thesis / Internship (BAF_4086) (3)
-      - Green Transition Finance (2)
-      - CSR, Business Ethics & Investor Relations (2)
-      - Human Resource Management (2)
-      - Project Management & Business Simulation (2)
-      - ACCA (to be defined) (2)
-      - English Advanced Track / Chinese Basic & Intermediate (1)
 
-      The curriculum provides both practical and theoretical foundations, gradually advancing students to specialized areas aligned with real-world finance and banking needs."
+  - program_type  # "Associate" or "Bachelor"
+  - major         # "Banking Management", "FinTech", "Accounting"
+  - fee_type      # "tuition", "registration_fee" (if needed)
+
+actions:
+  - action_ask_program
+  - action_confirm_program
+
+  - action_lookup_course
+  - action_lookup_fees
+  - action_lookup_program_fee
+
+
+
+slots:
+  program_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: program_type
+
+  amount:   # <-- Add this new slot
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+
+  major:
+    type: text
+    influence_conversation: false  # Set to true if it affects dialog flow
+    mappings:
+      - type: from_entity
+        entity: major
+
+
 
 
 

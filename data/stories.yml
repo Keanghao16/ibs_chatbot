@@ -1,64 +1,107 @@
 version: "3.1"
 
 stories:
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  #General Interaction
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+  #-------------------------------------
 
-- story: ask IBS history
-  steps:
-    - intent: ask_ibs_history
-    - action: utter_ask_ibs_history
+  # General Information about IBS
+  - story: ask IBS history
+    steps:
+      - intent: ask_ibs_history
+      - action: utter_ask_ibs_history
 
-- story: ask IBS location
-  steps:
-    - intent: ask_ibs_location
-    - action: utter_ask_ibs_location
+  - story: ask IBS location
+    steps:
+      - intent: ask_ibs_location
+      - action: utter_ask_ibs_location
 
-- story: ask IBS library
-  steps:
-    - intent: ask_ibs_library
-    - action: utter_ask_ibs_library
+  - story: ask IBS library
+    steps:
+      - intent: ask_ibs_library
+      - action: utter_ask_ibs_library
+  #-------------------------------------
 
-- story: ask enrollment requirements
-  steps:
-    - intent: ask_entrollment_requirements
-    - action: utter_ask_entrollment_requirements
+  # Enrollment and Admission Information
+  - story: ask enrollment requirements
+    steps:
+      - intent: ask_entrollment_requirements
+      - action: utter_ask_entrollment_requirements
 
-- story: ask entrance exam subjects
-  steps:
-    - intent: ask_entrance_exam_subject
-    - action: utter_ask_entrance_exam_subject
+  - story: ask entrance exam subjects
+    steps:
+      - intent: ask_entrance_exam
+      - action: utter_ask_entrance_exam
 
-- story: ask tuition fee
-  steps:
-    - intent: ask_tuition_fee
-    - action: utter_tuition_fee
+  - story: ask tuition fee
+    steps:
+      - intent: ask_tuition_fee
+      - action: utter_tuition_fee
 
-- story: ask program details
-  steps:
-    - intent: ask_program_details
-    - action: utter_program_details
+  #-------------Worked
+  - story: Ask for major clarification
+    steps:
+      - intent: ask_program_fee
+        entities:
+          - program_type: "Associate"
+      - action: utter_ask_major
+      - intent: inform
+        entities:
+          - major: "Banking Management"
+      - action: action_lookup_program_fee
+      # - action: utter_program_fee
+
+  - story: Handle program fee with major
+    steps:
+      - intent: ask_program_fee
+        entities:
+          - program_type: "Bachelor"
+          - major: "Accounting"
+      - action: action_lookup_program_fee
+
+  #-------------------------------------
+
+  # Program Information
+  # - story: ask program details
+  #   steps:
+  #     - intent: ask_program_details
+  #     - action: action_ask_program
+  #     - intent: program_type
+  #     - action: action_confirm_program
+
+  - story: Ask about course requirements
+    steps:
+      - intent: ask_program_details
+        entities:
+          - course_name: "Computer Science"
+      - action: utter_ask_program_type # Ask follow-up if needed
+      - intent: inform
+        entities:
+          - program_type: "BA"
+      - action: action_lookup_course # Custom action to fetch details
+      - action: utter_course_info

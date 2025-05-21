@@ -1,6 +1,7 @@
 version: "3.1"
 
 nlu:
+# General Interaction
 - intent: greet
   examples: |
     - hey
@@ -92,7 +93,10 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+#-------------------------------------
 
+
+# General Information about IBS
 - intent: ask_ibs_history
   examples: |
     - Can you tell me about the history of IBS?
@@ -116,7 +120,10 @@ nlu:
     - Can you tell me the library schedule?
     - What time does the library open and close?
     - Is the library open on weekends?
+# -------------------------------------
+    
 
+# Enrollment and Admission Information
 - intent: ask_entrollment_requirements
   examples: |
     - What are the enrollment requirements for IBS?
@@ -125,7 +132,7 @@ nlu:
     - What are the prerequisites for admission to IBS?
     - Do I need a high school diploma to enroll at IBS?
 
-- intent: ask_entrance_exam_subject
+- intent: ask_entrance_exam
   examples: |
     - What subjects are included in the entrance exam?
     - Can you tell me about the entrance exam subjects?
@@ -141,10 +148,69 @@ nlu:
     - What are the fees for the Banking and Management program?
     - How much is the semester fee at IBS?
 
+
+
+
+
+
+
+
+- intent: ask_program_fee
+  examples: |
+    - How much is the [Bachelor](program_type) program in [FinTech](major)?
+    - What’s the fee for [Accounting](major)?
+    - Tell me the annual cost for [Banking Management](major).
+    - Is the fee the same for all majors in [Associate](program_type)?
+
+
+- intent: ask_major_details
+  examples: |
+    - What courses are in [FinTech](major)?
+    - Does [Banking Management](major) require internships?
+#-------------------------------------
+
+
+# Program Information
 - intent: ask_program_details
   examples: |
-    - Can you provide details about the IBS programs?
-    - What programs does IBS offer?
-    - Tell me about the Banking and Management program.
-    - What degrees can I earn at IBS?
-    - Can you explain the IBS curriculum?
+    - What courses are in the [BA in Psychology](program_type)?
+    - Does [Computer Science](course_name) have lab work?
+    - Is [Mathematics](department) available as an [associate](program_type) degree?
+
+# - intent: major
+#   examples: |
+#     - [Banking Management](major)
+#     - [FinTech](major)
+#     - [Accounting](major)
+
+
+- intent: program_type
+  examples: |
+    - [bachelor](program)
+    - [associate](program)
+    - [master](program)
+    - [phd](program)
+
+
+# - intent: ask_program_details
+#   # examples: |
+#   #   - I want to know details about [bachelor](program)
+#   #   - Tell me about [bachelor](program) degree
+#   #   - Can you provide details about [bachelor](program) degree
+#   #   - What is the [master](program) program like?
+#   #   - Give me info on [phd](program)
+#   #   - Details about [certificate](program) course
+#   #   - I’m interested in the [bachelor](program) program
+#   #   - Tell me more about [master’s degree](program)
+#   #   - Can you give details on [undergraduate](program) studies?
+#   #   - What’s the [bachelor of science](program) like?
+#   examples: |
+#     - I want to know about program
+#     - Can you tell me about program
+#     - Give me info about program
+#     - Can you give me detail about program
+
+
+
+
+
