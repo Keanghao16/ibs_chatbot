@@ -1,216 +1,188 @@
 version: "3.1"
 
 nlu:
-# General Interaction
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-    - wassup
+  # General Interaction
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - wassup
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - fine
-    - I'm fine
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - fine
+      - I'm fine
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-#-------------------------------------
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
 
+  - intent: thank_you
+    examples: |
+      - thank you
+      - thanks
+      - thank you so much
+      - thanks a lot
+      - appreciate it
+      - thank you very much
+      - thx
+      - many thanks
+  #-------------------------------------
+  # General Information about IBS
+  - intent: ask_ibs_history
+    examples: |
+      - Can you tell me about the history of IBS?
+      - What is the history of IBS?
+      - How did IBS start?
+      - Tell me about the origin of IBS.
+      - When was IBS established?
 
-# General Information about IBS
-- intent: ask_ibs_history
-  examples: |
-    - Can you tell me about the history of IBS?
-    - What is the history of IBS?
-    - How did IBS start?
-    - Tell me about the origin of IBS.
-    - When was IBS established?
+  - intent: ask_ibs_location
+    examples: |
+      - Where is IBS located?
+      - What is the address of IBS?
+      - Can you share the location of IBS?
+      - Where can I find IBS?
+      - What is the IBS campus address?
 
-- intent: ask_ibs_location
-  examples: |
-    - Where is IBS located?
-    - What is the address of IBS?
-    - Can you share the location of IBS?
-    - Where can I find IBS?
-    - What is the IBS campus address?
+  - intent: ask_ibs_library
+    examples: |
+      - What are the library hours at IBS?
+      - When is the IBS library open?
+      - Can you tell me the library schedule?
+      - What time does the library open and close?
+      - Is the library open on weekends?
+  # -------------------------------------
+  # Enrollment and Admission Information
+  - intent: ask_entrollment_requirements
+    examples: |
+      - What are the enrollment requirements for IBS?
+      - How can I enroll at IBS?
+      - What qualifications do I need to join IBS?
+      - What are the prerequisites for admission to IBS?
+      - Do I need a high school diploma to enroll at IBS?
 
-- intent: ask_ibs_library
-  examples: |
-    - What are the library hours at IBS?
-    - When is the IBS library open?
-    - Can you tell me the library schedule?
-    - What time does the library open and close?
-    - Is the library open on weekends?
-# -------------------------------------
-    
+  - intent: ask_entrance_exam
+    examples: |
+      - What subjects are included in the entrance exam?
+      - Can you tell me about the entrance exam subjects?
+      - What do I need to study for the IBS entrance exam?
+      - What topics are covered in the entrance exam?
+      - How many subjects are in the IBS entrance exam?
 
-# Enrollment and Admission Information
-- intent: ask_entrollment_requirements
-  examples: |
-    - What are the enrollment requirements for IBS?
-    - How can I enroll at IBS?
-    - What qualifications do I need to join IBS?
-    - What are the prerequisites for admission to IBS?
-    - Do I need a high school diploma to enroll at IBS?
+  - intent: ask_tuition_fee
+    examples: |
+      - What is the tuition fee for IBS?
+      - How much does it cost to study at IBS?
+      - Can you tell me about the tuition fees?
+      - What are the fees for the Banking and Management program?
+      - How much is the semester fee at IBS?
 
-- intent: ask_entrance_exam
-  examples: |
-    - What subjects are included in the entrance exam?
-    - Can you tell me about the entrance exam subjects?
-    - What do I need to study for the IBS entrance exam?
-    - What topics are covered in the entrance exam?
-    - How many subjects are in the IBS entrance exam?
+  - intent: ask_program_fee
+    examples: |
+      - How much is the [Bachelor](program_type) program in [FinTech](major)?
+      - What’s the fee for [Accounting](major)?
+      - Tell me the annual cost for [Banking Management](major).
+      - Is the fee the same for all majors in [Associate](program_type)?
+  #-------------------------------------
+  # Program Information
+  - intent: ask_program_details
+    examples: |
+      - What courses are in the [BA in Psychology](program_type)?
+      - Does [Computer Science](course_name) have lab work?
+      - Is [Mathematics](department) available as an [associate](program_type) degree?
 
-- intent: ask_tuition_fee
-  examples: |
-    - What is the tuition fee for IBS?
-    - How much does it cost to study at IBS?
-    - Can you tell me about the tuition fees?
-    - What are the fees for the Banking and Management program?
-    - How much is the semester fee at IBS?
+  - intent: ask_major_details
+    examples: |
+      - What courses are in [FinTech](major)?
+      - Does [Banking Management](major) require internships?
 
+  # - intent: major
+  #   examples: |
+  #     - [Banking Management](major)
+  #     - [FinTech](major)
+  #     - [Accounting](major)
 
-
-
-
-
-
-
-- intent: ask_program_fee
-  examples: |
-    - How much is the [Bachelor](program_type) program in [FinTech](major)?
-    - What’s the fee for [Accounting](major)?
-    - Tell me the annual cost for [Banking Management](major).
-    - Is the fee the same for all majors in [Associate](program_type)?
-
-
-- intent: ask_major_details
-  examples: |
-    - What courses are in [FinTech](major)?
-    - Does [Banking Management](major) require internships?
-#-------------------------------------
-
-
-# Program Information
-- intent: ask_program_details
-  examples: |
-    - What courses are in the [BA in Psychology](program_type)?
-    - Does [Computer Science](course_name) have lab work?
-    - Is [Mathematics](department) available as an [associate](program_type) degree?
-
-# - intent: major
-#   examples: |
-#     - [Banking Management](major)
-#     - [FinTech](major)
-#     - [Accounting](major)
-
-
-- intent: program_type
-  examples: |
-    - [bachelor](program)
-    - [associate](program)
-    - [master](program)
-    - [phd](program)
-
-
-# - intent: ask_program_details
-#   # examples: |
-#   #   - I want to know details about [bachelor](program)
-#   #   - Tell me about [bachelor](program) degree
-#   #   - Can you provide details about [bachelor](program) degree
-#   #   - What is the [master](program) program like?
-#   #   - Give me info on [phd](program)
-#   #   - Details about [certificate](program) course
-#   #   - I’m interested in the [bachelor](program) program
-#   #   - Tell me more about [master’s degree](program)
-#   #   - Can you give details on [undergraduate](program) studies?
-#   #   - What’s the [bachelor of science](program) like?
-#   examples: |
-#     - I want to know about program
-#     - Can you tell me about program
-#     - Give me info about program
-#     - Can you give me detail about program
-
-
-
-
-
+  - intent: program_type
+    examples: |
+      - [bachelor](program)
+      - [associate](program)
+      - [master](program)
+      - [phd](program)

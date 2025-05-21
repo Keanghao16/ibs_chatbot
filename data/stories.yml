@@ -15,19 +15,16 @@ stories:
       - action: utter_greet
       - intent: mood_unhappy
       - action: utter_cheer_up
-      - action: utter_did_that_help
-      - intent: affirm
-      - action: utter_happy
 
-  - story: sad path 2
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_unhappy
-      - action: utter_cheer_up
-      - action: utter_did_that_help
-      - intent: deny
-      - action: utter_goodbye
+  # - story: sad path 2
+  #   steps:
+  #     - intent: greet
+  #     - action: utter_greet
+  #     - intent: mood_unhappy
+  #     - action: utter_cheer_up
+  #     - action: utter_did_that_help
+  #     - intent: deny
+  #     - action: utter_goodbye
   #-------------------------------------
 
   # General Information about IBS
@@ -63,7 +60,6 @@ stories:
       - intent: ask_tuition_fee
       - action: utter_tuition_fee
 
-  #-------------Worked
   - story: Ask for major clarification
     steps:
       - intent: ask_program_fee
@@ -74,7 +70,6 @@ stories:
         entities:
           - major: "Banking Management"
       - action: action_lookup_program_fee
-      # - action: utter_program_fee
 
   - story: Handle program fee with major
     steps:
