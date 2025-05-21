@@ -163,22 +163,7 @@ nlu:
       - Is the fee the same for all majors in [Associate](program_type)?
   #-------------------------------------
   # Program Information
-  - intent: ask_program_details
-    examples: |
-      - What courses are in the [BA in Psychology](program_type)?
-      - Does [Computer Science](course_name) have lab work?
-      - Is [Mathematics](department) available as an [associate](program_type) degree?
 
-  - intent: ask_major_details
-    examples: |
-      - What courses are in [FinTech](major)?
-      - Does [Banking Management](major) require internships?
-
-  # - intent: major
-  #   examples: |
-  #     - [Banking Management](major)
-  #     - [FinTech](major)
-  #     - [Accounting](major)
 
   - intent: program_type
     examples: |

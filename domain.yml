@@ -82,11 +82,9 @@ responses:
   #-------------------------------------
 
   # Program Information
-  utter_ask_program_type:
-    - text: "Do you want details for an associate, BA, or BSc program?"
 
-  utter_course_info:
-    - text: "Here are the details for {program_type} in {course_name}: ..."
+
+
   #-------------------------------------
 
 entities:

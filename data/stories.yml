@@ -15,16 +15,6 @@ stories:
       - action: utter_greet
       - intent: mood_unhappy
       - action: utter_cheer_up
-
-  # - story: sad path 2
-  #   steps:
-  #     - intent: greet
-  #     - action: utter_greet
-  #     - intent: mood_unhappy
-  #     - action: utter_cheer_up
-  #     - action: utter_did_that_help
-  #     - intent: deny
-  #     - action: utter_goodbye
   #-------------------------------------
 
   # General Information about IBS
@@ -82,21 +72,4 @@ stories:
   #-------------------------------------
 
   # Program Information
-  # - story: ask program details
-  #   steps:
-  #     - intent: ask_program_details
-  #     - action: action_ask_program
-  #     - intent: program_type
-  #     - action: action_confirm_program
 
-  - story: Ask about course requirements
-    steps:
-      - intent: ask_program_details
-        entities:
-          - course_name: "Computer Science"
-      - action: utter_ask_program_type # Ask follow-up if needed
-      - intent: inform
-        entities:
-          - program_type: "BA"
-      - action: action_lookup_course # Custom action to fetch details
-      - action: utter_course_info

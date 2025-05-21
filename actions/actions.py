@@ -12,15 +12,6 @@ class ask_program(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        # program_entity = next(tracker.get_latest_entity_values('program'), None)
-
-        # if program_entity: 
-        #     dispatcher.utter_message(text=f"You have selected {program_entity} as your program choice")
-        # else:
-        #     dispatcher.utter_message(text="I am sorry, I could not detect program choice")
-
-        # return []
-
         dispatcher.utter_message(text="Which kind of program would you like to know?")
         
         return []
