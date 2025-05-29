@@ -78,14 +78,9 @@ responses:
     - text: "The annual fee for the {program_type} program in {major} is ${amount}."
   utter_ask_major:
     - text: "Which major are you interested in? (Banking Management, FinTech, Accounting)"
-
-  #-------------------------------------
-
-  # Program Information
-
-
-
-  #-------------------------------------
+  utter_ask_program_type:
+    - text: "Which program type are you interested in? (Associate, Bachelor)"
+  # ...existing code...
 
 entities:
   - program

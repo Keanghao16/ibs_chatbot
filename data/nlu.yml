@@ -164,10 +164,13 @@ nlu:
   #-------------------------------------
   # Program Information
 
-
-  - intent: program_type
+  - intent: ask_program_details
     examples: |
-      - [bachelor](program)
-      - [associate](program)
-      - [master](program)
-      - [phd](program)
+      - Can you tell me about the [Bachelor](program_type) in [Accounting](major)?
+      - What courses are included in the [Associate](program_type) program?
+      - Give me details about the [FinTech](major) major.
+      - What is included in the [Bachelor](program_type) of [Banking Management](major)?
+      - Tell me about the [Accounting](major) program.
+      - What are the details of the [Associate](program_type) in [FinTech](major)?
+      - What subjects are covered in the [Bachelor](program_type) program?
+      - I want to know about the [Banking Management](major) course.

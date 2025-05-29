@@ -73,3 +73,32 @@ stories:
 
   # Program Information
 
+  - story: Handle program details with major
+    steps:
+      - intent: ask_program_details
+        entities:
+          - program_type: "Bachelor"
+          - major: "Accounting"
+      - action: action_lookup_course
+
+  - story: Ask for major clarification for program details
+    steps:
+      - intent: ask_program_details
+        entities:
+          - program_type: "Associate"
+      - action: action_lookup_course
+      - intent: inform
+        entities:
+          - major: "FinTech"
+      - action: action_lookup_course
+
+  - story: Ask for program type clarification for program details
+    steps:
+      - intent: ask_program_details
+        entities:
+          - major: "Accounting"
+      - action: action_lookup_course
+      - intent: inform
+        entities:
+          - program_type: "Bachelor"
+      - action: action_lookup_course
